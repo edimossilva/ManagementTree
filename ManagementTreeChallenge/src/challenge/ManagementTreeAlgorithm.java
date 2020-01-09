@@ -8,6 +8,7 @@ import java.util.stream.Stream;
 public class ManagementTreeAlgorithm {
 	public static void main(String[] args) {
 		List<Employee> employees = new ArrayList<Employee>();
+//		addFirstTestCase(employees);
 		addSecondTestCase(employees);
 		new ManagementTreeAlgorithm().displayManagementTree(employees);
 	}
@@ -46,6 +47,7 @@ public class ManagementTreeAlgorithm {
 			System.out.println(level + employee);
 			showEmployee(employees, employee.getId(), level);
 		}
+		employees.removeAll(foundEmployees);
 	}
 
 	private List<Employee> findByManagerId(List<Employee> employees, int managerId) {
